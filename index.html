@@ -9,13 +9,7 @@
 
     <script>
         // Your JSON data
-        var jsonData = {
-          "name": "John Doe",
-          "age": 25,
-          "city": "Sample City",
-          "isStudent": true,
-          "courses": ["Mathematics", "Computer Science", "Physics"]
-        };
+        var jsonData = { name: 'John Doe', age: 25, city: 'Sample City', isStudent: true, courses: ['Mathematics', 'Computer Science', 'Physics'] };
 
         // Convert JSON to string
         var jsonString = JSON.stringify(jsonData);
@@ -26,9 +20,14 @@
         // Create a Blob URL
         var blobUrl = URL.createObjectURL(blob);
 
-        // Open the Blob URL in a new tab
-        window.open(blobUrl, '_blank');
+        // Function to open Blob URL in a new tab
+        function openBlobUrl() {
+            window.open(blobUrl, '_blank');
+        }
     </script>
+
+    <!-- Button to open Blob URL -->
+    <button onclick="openBlobUrl()">Open Blob URL</button>
 
 </body>
 </html>
