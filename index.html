@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Blob URL</title>
+</head>
+<body>
+
+    <script>
+        // Your JSON data
+        var jsonData = { key: 'value', anotherKey: 'anotherValue' };
+
+        // Convert JSON to string
+        var jsonString = JSON.stringify(jsonData);
+
+        // Create a Blob
+        var blob = new Blob([jsonString], { type: 'application/json' });
+
+        // Create a Blob URL
+        var blobUrl = URL.createObjectURL(blob);
+
+        // Open the Blob URL in a new tab
+        window.open(blobUrl, '_blank');
+    </script>
+
+</body>
+</html>
